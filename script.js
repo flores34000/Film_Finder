@@ -3,15 +3,14 @@ const btn = document.querySelector("#btn");
 const section = document.querySelector("section");
 const body = document.querySelector("body");
 
-// const modal
-const titleModal = document.querySelector("h3");
+
 
 const searchMovies = function () {
   fetch(
     "https://www.omdbapi.com/?apikey=" +
       mykey +
       "&s=" +
-      document.querySelector("#champ").value
+      document.querySelector("#input-search").value
   )
     .then((item) => item.json())
     .then((movies) =>
@@ -44,6 +43,8 @@ const searchMovies = function () {
         containerTitleYear.appendChild(year);
         containerTitleYear.appendChild(buttonRead);
 
+
+// const modal
         const paraModal = document.querySelector(".para-modal");
         const titleModal = document.querySelector(".title-modal");
         const imgModal = document.querySelector(".img-modal");
@@ -84,3 +85,5 @@ window.onclick = function (event) {
 };
 
 btn.addEventListener("click", searchMovies);
+
+
