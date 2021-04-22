@@ -8,7 +8,7 @@ const titleModal = document.querySelector("h3");
 
 const searchMovies = function () {
   fetch(
-    "http://www.omdbapi.com/?apikey=" +
+    "https://www.omdbapi.com/?apikey=" +
       mykey +
       "&s=" +
       document.querySelector("#champ").value
