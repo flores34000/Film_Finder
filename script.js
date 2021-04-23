@@ -1,4 +1,4 @@
-var mykey = config.MY_KEY;
+let mykey = config.MY_KEY;
 const btn = document.querySelector("#btn");
 const section = document.querySelector("section");
 const body = document.querySelector("body");
