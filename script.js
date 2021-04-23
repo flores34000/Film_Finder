@@ -13,8 +13,9 @@ const searchMovies = function () {
       document.querySelector("#input-search").value
   )
     .then((item) => item.json())
-    .then((movies) =>
+    .then((movies) => {section.innerHTML = ""
       movies.Search.forEach((element) => {
+       
         const card = document.createElement("div");
         card.classList.add("card");
 
@@ -65,7 +66,7 @@ const searchMovies = function () {
         };
 
         buttonRead.addEventListener("click", modalFunction);
-      })
+      })}
     );
 };
 
